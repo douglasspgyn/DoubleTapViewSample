@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="douglasspgyn.com.github.doubletapview.sample.MainActivity">
+    tools:context="douglasspgyn.com.github.doubletapviewsample.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -112,6 +112,7 @@
                 android:layout_height="30dp"
                 android:layout_margin="4dp"
                 android:background="#ccc"
+                app:animatedViewAnimation="@anim/fade_in_out"
                 app:animatedViewBackgroundColor="#0000FF"
                 app:animatedViewMeasure="100dp" />
 
