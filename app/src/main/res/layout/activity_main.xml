@@ -122,6 +122,7 @@
                 android:layout_height="150dp"
                 android:layout_margin="4dp"
                 android:background="#ccc"
+                app:animatedViewBackground="@drawable/square_view"
                 app:animatedViewBackgroundColor="#00FF00"
                 app:animatedViewMeasure="100dp" />
 

@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         doubleTapView5.setAnimatedViewAnimation(R.anim.fade_in_out);
 
+        doubleTapView5.setAnimatedViewBackground(R.drawable.square_view);
+
         doubleTapView5.setAnimatedViewBackgroundColor("#3F51B5");
         //doubleTapView5.setAnimatedViewBackgroundColor(R.color.colorPrimary);
 
