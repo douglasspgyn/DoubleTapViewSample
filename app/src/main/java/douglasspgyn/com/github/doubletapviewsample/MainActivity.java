@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import douglasspgyn.com.github.doubletapview.DoubleTapView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private DoubleTapView doubleTapView5;
     private DoubleTapView doubleTapView6;
     private DoubleTapView doubleTapView7;
-    private DoubleTapView doubleTapView8;
 
     private int enabledColor;
     private int disableColor;
@@ -38,17 +39,13 @@ public class MainActivity extends AppCompatActivity {
         setListeners();
 
         doubleTapView5.setAnimatedViewAnimation(R.anim.fade_in_out);
-
         doubleTapView5.setAnimatedViewBackground(R.drawable.square_view);
-
         doubleTapView5.setAnimatedViewBackgroundColor("#3F51B5");
-        //doubleTapView5.setAnimatedViewBackgroundColor(R.color.colorPrimary);
-
         doubleTapView5.setAnimatedViewDrawable(R.drawable.ic_android);
-        //doubleTapView5.setAnimatedViewDrawable(getResources().getDrawable(R.drawable.ic_android));
-        //doubleTapView5.setAnimatedViewDrawable(ContextCompat.getDrawable(this, R.drawable.ic_android));
-
         doubleTapView5.setAnimatedViewMeasure(100);
+
+        Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(doubleTapView2.getBackgroundImageView());
+        Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(doubleTapView3.getBackgroundImageView());
     }
 
     private void bindView() {
@@ -64,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         doubleTapView5 = (DoubleTapView) findViewById(R.id.dt5);
         doubleTapView6 = (DoubleTapView) findViewById(R.id.dt6);
         doubleTapView7 = (DoubleTapView) findViewById(R.id.dt7);
-        doubleTapView8 = (DoubleTapView) findViewById(R.id.dt8);
     }
 
     private void setColors() {
@@ -114,56 +110,49 @@ public class MainActivity extends AppCompatActivity {
         doubleTapView1.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 1", Toast.LENGTH_SHORT).show();
             }
         });
 
         doubleTapView2.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 2", Toast.LENGTH_SHORT).show();
             }
         });
 
         doubleTapView3.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 3", Toast.LENGTH_SHORT).show();
             }
         });
 
         doubleTapView4.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "4", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 4", Toast.LENGTH_SHORT).show();
             }
         });
 
         doubleTapView5.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "5", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 5", Toast.LENGTH_SHORT).show();
             }
         });
 
         doubleTapView6.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "6", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 6", Toast.LENGTH_SHORT).show();
             }
         });
 
         doubleTapView7.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
             @Override
             public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "7", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        doubleTapView8.setOnDoubleTapEventListener(new DoubleTapView.onDoubleTapEventListener() {
-            @Override
-            public void onDoubleTap() {
-                Toast.makeText(MainActivity.this, "8", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Double Tap Callback - Double Tap View 7", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -179,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
         doubleTapView5.removeOnDoubleTapEventListener();
         doubleTapView6.removeOnDoubleTapEventListener();
         doubleTapView7.removeOnDoubleTapEventListener();
-        doubleTapView8.removeOnDoubleTapEventListener();
     }
 
     private void enableDoubleTap() {
@@ -193,7 +181,6 @@ public class MainActivity extends AppCompatActivity {
         doubleTapView5.enableDoubleTap();
         doubleTapView6.enableDoubleTap();
         doubleTapView7.enableDoubleTap();
-        doubleTapView8.enableDoubleTap();
     }
 
     private void disableDoubleTap() {
@@ -207,6 +194,5 @@ public class MainActivity extends AppCompatActivity {
         doubleTapView5.disableDoubleTap();
         doubleTapView6.disableDoubleTap();
         doubleTapView7.disableDoubleTap();
-        doubleTapView8.disableDoubleTap();
     }
 }

@@ -60,11 +60,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <douglasspgyn.com.github.doubletapview.DoubleTapView
                 android:id="@+id/dt1"
@@ -75,42 +73,57 @@
 
             <douglasspgyn.com.github.doubletapview.DoubleTapView
                 android:id="@+id/dt2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="4dp"
-                android:background="#ccc"
-                app:animatedViewBackgroundColor="#FF0000" />
-
-            <douglasspgyn.com.github.doubletapview.DoubleTapView
-                android:id="@+id/dt3"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_margin="4dp"
-                android:background="#ccc"
-                app:animatedViewDrawable="@drawable/ic_android" />
-
-            <douglasspgyn.com.github.doubletapview.DoubleTapView
-                android:id="@+id/dt4"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
+                android:layout_below="@+id/dt1"
                 android:layout_margin="4dp"
                 android:background="#ccc"
+                app:animatedViewBackground="@drawable/square_view"
                 app:animatedViewBackgroundColor="#AA55AA"
                 app:animatedViewDrawable="@drawable/ic_android"
                 app:animatedViewMeasure="200dp" />
 
             <douglasspgyn.com.github.doubletapview.DoubleTapView
+                android:id="@+id/dt3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/dt1"
+                android:layout_margin="4dp"
+                android:layout_toEndOf="@+id/dt2"
+                android:layout_toRightOf="@+id/dt2"
+                app:backgroundScaleType="centerCrop"
+                android:background="#ccc"
+                app:animatedViewBackgroundColor="#FF0000" />
+
+            <douglasspgyn.com.github.doubletapview.DoubleTapView
+                android:id="@+id/dt4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/dt1"
+                android:layout_margin="4dp"
+                android:layout_toEndOf="@+id/dt3"
+                android:layout_toRightOf="@+id/dt3"
+                android:background="#ccc"
+                app:animatedViewDrawable="@drawable/ic_android" />
+
+            <douglasspgyn.com.github.doubletapview.DoubleTapView
                 android:id="@+id/dt5"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
+                android:layout_below="@+id/dt3"
                 android:layout_margin="4dp"
+                android:layout_toEndOf="@+id/dt2"
+                android:layout_toRightOf="@+id/dt2"
                 android:background="#ccc" />
 
             <douglasspgyn.com.github.doubletapview.DoubleTapView
                 android:id="@+id/dt6"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
+                android:layout_below="@+id/dt5"
                 android:layout_margin="4dp"
+                android:layout_toEndOf="@+id/dt2"
+                android:layout_toRightOf="@+id/dt2"
                 android:background="#ccc"
                 app:animatedViewAnimation="@anim/fade_in_out"
                 app:animatedViewBackgroundColor="#0000FF"
@@ -120,19 +133,14 @@
                 android:id="@+id/dt7"
                 android:layout_width="50dp"
                 android:layout_height="150dp"
+                android:layout_below="@+id/dt4"
                 android:layout_margin="4dp"
+                android:layout_toEndOf="@+id/dt3"
+                android:layout_toRightOf="@+id/dt3"
                 android:background="#ccc"
                 app:animatedViewBackground="@drawable/square_view"
                 app:animatedViewBackgroundColor="#00FF00"
                 app:animatedViewMeasure="100dp" />
-
-            <douglasspgyn.com.github.doubletapview.DoubleTapView
-                android:id="@+id/dt8"
-                android:layout_width="@dimen/animatedViewMeasure"
-                android:layout_height="@dimen/animatedViewMeasure"
-                android:layout_margin="4dp"
-                android:background="#ccc"
-                app:animatedViewMeasure="100dp" />
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 </LinearLayout>

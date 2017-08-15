@@ -28,4 +28,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile 'com.github.douglasspgyn:DoubleTapView:0.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
