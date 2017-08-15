@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setListeners();
 
         doubleTapView5.setAnimatedViewAnimation(R.anim.fade_in_out);
-        doubleTapView5.setAnimatedViewBackground(R.drawable.square_view);
+        doubleTapView5.setAnimatedViewBackground(R.drawable.square_background_view);
         doubleTapView5.setAnimatedViewBackgroundColor(R.color.colorPrimary);
         doubleTapView5.setAnimatedViewDrawable(R.drawable.ic_android);
         doubleTapView5.setAnimatedViewDrawableColor(R.color.colorAccent);
